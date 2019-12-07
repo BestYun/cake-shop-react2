@@ -1,0 +1,11 @@
+.content {
+  overflow: scroll;
+}
+
+.flex-item {
+  flex-shrink: 0;
+}
+
+.app {
+  height: 100%;
+}

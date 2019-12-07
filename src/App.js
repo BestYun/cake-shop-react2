@@ -1,12 +1,26 @@
 import React from 'react';
-import './App.css';
-import { Button } from 'antd-mobile';
+import './assets/styles/reset.css'
+import './assets/styles/border.css'
+import './assets/styles/iconfont.css'
+import 'flex.css/dist/data-flex.css';
+import './App.css'
+
+import {
+  StoreProvider
+} from 'easy-peasy';
+import store from './store/index'
+import AppRouter from './router/index'
+
 function App() {
   return (
-    <div className="App">
+    <StoreProvider store={
+      store
+    }>
+      <div className="App" >
+        <AppRouter />
 
-      <Button type="primary">add</Button>
-    </div>
+      </div>
+    </StoreProvider>
   );
 }
 
