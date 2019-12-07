@@ -14,7 +14,7 @@ export default function CategoryItem() {
 
     return (
         <div data-flex='dir:left cross:center main:justify' style={{
-            margin: '15px',
+            margin: '15px 10px',
             padding: "10px 20px",
             backgroundColor: 'white',
             borderRadius: '8px',
