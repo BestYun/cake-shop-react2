@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './index.css'
 import CitySearch from './component/CitySearch'
 import Banner from './component/Banner'
-
+import CategoryItem from './component/CategoryItem'
 {/* <p>地址与搜索</p>
 <p>广告</p>
 <p>分类</p>
@@ -16,7 +16,7 @@ export default function HomePage() {
         <div data-flex='dir:top' className='app'>
             <CitySearch cityName={cityName} />
             <Banner />
-
+            <CategoryItem />
         </div >
     )
 }
