@@ -45,24 +45,28 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### antd-mobile 按需加载设置
 
-### Analyzing the Bundle Size
+#### 1.安装库
+<p>yarn add react-app-rewired customize-cra babel-plugin-import  --dev</p>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### 2.在项目根目录创建一个 config-overrides.js 用于修改默认配置
+```
+const { override, fixBabelImports } = require('customize-cra');
+module.exports = override(
+    fixBabelImports('import', {
+        libraryName: 'antd-mobile',
+        style: 'css',
+    }),
+);
+```
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### 3.修改package.json文件里面的scripts修改为
+```
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+```
