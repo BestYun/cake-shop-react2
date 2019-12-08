@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
-import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
+import { Tabs } from 'antd-mobile';
+import ContentPage from './content_page'
 
 const tabs = [
     { title: '蛋糕' },
@@ -8,9 +9,6 @@ const tabs = [
     { title: '下午茶' },
     { title: '饮品' },
 ];
-
-
-
 
 export default function CategoryPage() {
 
@@ -33,9 +31,11 @@ export default function CategoryPage() {
                     '#f74b60'
                 }
             >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundColor: '#fff' }}>
-                    Content of first tab
-                    </div>
+                <div style={{
+                    height: '100%', backgroundColor: 'rgb(242,242,242)'
+                }}>
+                    <ContentPage />
+                </div>
             </Tabs>
 
         </div >
