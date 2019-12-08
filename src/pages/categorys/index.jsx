@@ -26,7 +26,8 @@ export default function CategoryPage() {
                     backgroundColor: '#f74b60',
                     color: '#f74b60',
                     borderWidth: 0,
-
+                    margin: '0px 32px',
+                    width: '30px'
                 }}
                 tabBarActiveTextColor={
                     '#f74b60'
