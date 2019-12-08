@@ -1,11 +1,11 @@
 import React from 'react'
-import './index.css'
+import './index.scss'
 
 ///分类里面的item
 export default function GoodsItem() {
     return (
         <div data-flex='dir:top' className='item'>
-            <img className='goods-img' />
+            <img className='img' />
             <div data-flex='dir:top' style={{
                 flex: 1,
             }}>
