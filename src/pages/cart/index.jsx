@@ -16,8 +16,10 @@ export default function CartPage() {
             </div>
             <div style={{ flex: 1, overflow: 'scroll', backgroundColor: 'clear', paddingBottom: '8px' }}>
                 <CartEmpty />
+                <div style={{ margin: '10px 0px' }}>
+                    <YouLike />
+                </div>
 
-                <YouLike />
             </div>
 
             <ClosAccount />
