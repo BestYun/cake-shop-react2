@@ -3,6 +3,7 @@ import './index.scss'
 import CartEmpty from './component/CartEmpty'
 import YouLike from './component/YouLike'
 import ClosAccount from './component/ClosAccount'
+import CartContent from './component/CartContent'
 
 export default function CartPage() {
     return (
@@ -15,7 +16,11 @@ export default function CartPage() {
                 <span style={{ fontSize: '18px' }}>购物车</span>
             </div>
             <div style={{ flex: 1, overflow: 'scroll', backgroundColor: 'clear', paddingBottom: '8px' }}>
-                <CartEmpty />
+                {/* <CartEmpty /> */}
+                {
+                    [1, 2, 3, 4].map(item => <CartContent />)
+                }
+
                 <div style={{ margin: '10px 0px' }}>
                     <YouLike />
                 </div>
