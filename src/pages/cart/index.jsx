@@ -1,14 +1,26 @@
 import React from 'react'
-import './index.css'
+import './index.scss'
+import CartEmpty from './component/CartEmpty'
+import YouLike from './component/YouLike'
+import ClosAccount from './component/ClosAccount'
 
 export default function CartPage() {
     return (
-        <div>
-            <p>cart page</p>
-            <p>购物</p>
-            <p>空的购物车显示</p>
-            <p>猜你喜欢</p>
-            <p>去结算</p>
+        <div data-flex='dir:top' style={{ height: '100%' }}>
+            <div data-flex='dir:lef main:center cross:center' style={{
+                height: '49px', backgroundColor: 'white',
+                marginBottom: '8px',
+                flexShrink: 0,
+            }}>
+                <span style={{ fontSize: '18px' }}>购物车</span>
+            </div>
+            <div style={{ flex: 1, overflow: 'scroll', backgroundColor: 'clear', paddingBottom: '8px' }}>
+                <CartEmpty />
+
+                <YouLike />
+            </div>
+
+            <ClosAccount />
         </div>
     )
 }
