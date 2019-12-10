@@ -31,17 +31,33 @@ export default function MePage() {
                 <div data-flex='dir:left box:mean' style={{ marginTop: '11px' }}>
                     {
                         [
-                            { title: '待付款', icon: '' },
-                            { title: '待发货', icon: '' },
-                            { title: '待收货', icon: '' },
-                            { title: '全部', icon: '' },
+                            { title: '待付款', icon: 'wait_pay.png' },
+                            { title: '待发货', icon: 'wait_send.png' },
+                            { title: '待收货', icon: 'wait_revecive.png' },
+                            { title: '全部', icon: 'all.png' },
                         ].map((item, index) => {
+                            const iconImg = require('../../assets/images/' + item.icon)
                             return (
                                 <div data-flex='dir:top main:center cross:center' onClick={() => {
                                     console.log('--------' + index)
-                                }} >
-                                    <image style={{ width: '40px', height: '40px', backgroundColor: 'red' }} />
+                                }} style={{}}>
+
+                                    <div data-flex="dir:left">
+                                        <img src={iconImg} style={{ width: '40px', height: '40px' }} />
+
+                                        {/* <span style={{
+                                            backgroundColor: 'red',
+                                            height: '20px', width: '20px', borderRadius: '20px',
+                                            color: 'white', fontSize: '12px',
+                                            marginTop: '-10px',
+                                            marginLeft: '-10px', position: 'relative'
+
+                                        }}>{index}</span> */}
+                                    </div>
+
                                     <span style={{ color: '#666', marginTop: '8px', fontSize: '12px' }}>{item.title}</span>
+
+
                                 </div>
                             )
                         })
@@ -52,13 +68,52 @@ export default function MePage() {
             </div>
 
             <div style={{ backgroundColor: 'white', marginTop: '20px' }}>
-                <p>我的优惠券</p>
-                <p>我的地址</p>
-                <p>关于我们</p>
-                <p>退出登陆</p>
+                <div onClick={() => {
+                    console.log('item')
+                }}>
+                    <div data-flex='dir:left cross:center' style={{ padding: "12px" }}>
+                        <img src={require('../../assets/images/coupon.png')} style={{ width: '20px', height: '20px', marginRight: '10px' }} />
+                        <span style={{ flex: 1 }}>我的优惠券</span>
+                        <img style={{ width: '20px', height: '20px' }} src={require('../../assets/images/arrow_right.png')} />
+
+                    </div>
+                    <div style={{ height: '1px', backgroundColor: 'rgb(242,242,242)' }}></div>
+                </div>
+
+                <div onClick={() => {
+                    console.log('item')
+                }}>
+                    <div data-flex='dir:left cross:center' style={{ padding: "12px" }}>
+                        <img src={require('../../assets/images/address_me.png')} style={{ width: '20px', height: '20px', marginRight: '10px' }} />
+                        <span style={{ flex: 1 }}>我的地址</span>
+                        <img style={{ width: '20px', height: '20px' }} src={require('../../assets/images/arrow_right.png')} />
+
+                    </div>
+                    <div style={{ height: '1px', backgroundColor: 'rgb(242,242,242)' }}></div>
+                </div>
+                <div onClick={() => {
+                    console.log('item')
+                }}>
+                    <div data-flex='dir:left cross:center' style={{ padding: "12px" }}>
+                        <img src={require('../../assets/images/about_me.png')} style={{ width: '20px', height: '20px', marginRight: '10px' }} />
+                        <span style={{ flex: 1 }}>关于我们</span>
+                        <img style={{ width: '20px', height: '20px' }} src={require('../../assets/images/arrow_right.png')} />
+
+                    </div>
+                    <div style={{ height: '1px', backgroundColor: 'rgb(242,242,242)' }}></div>
+                </div>
             </div>
 
+            <div data-flex='dir:top main:center cross:center' style={{
+                padding: "12px", marginTop: '40px', marginLeft: "20px", marginRight: '20px',
+                color: 'white',
+                border: '1px solid #f74b60',
+                borderRadius: '40px'
 
-        </div>
+            }}>
+                <span style={{ color: ' #f74b60' }}>退出登陆</span>
+            </div>
+
+        </div >
     )
 }
